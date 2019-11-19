@@ -1,0 +1,64 @@
+---
+title: "R Stats Package"
+author: "Jerri Schorr"
+date: "11-19-2019"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+### Introduction
+
+Stats is one of the most commonly used packages in R. Any student that is in a statistics class will use at least one of its functions. Anyone that is working with data and using R will use the Stats package and its functions to find distributions, medians, linear models, and more. The functions within the package make all of the statistical calculations much easier for the user. 
+
+### Features
+
+This package over 500 statistical functions. Some of the most common ones used are:
+
+* **median:** allows you to find the median value in a data set
+* **sd:** finds the standard deviation of a data set
+* **IQR:** finds the inter quartile range of a data set
+* **lm:** creates a linear model from a data set
+* **t.test:** performs a t distribution test and outputs the t value and p value
+
+### Installation
+
+This package is already available in your base R program. If you need to update the Stats package or re-download it you can follow this prompt in R. 
+
+```{r}
+install.packages("stats")
+```
+
+### Basic Usage
+
+We can perform a basic t test using the steps below. We will look at the cars data set and test to see if the mean speed is different than 0 mph with a 95% confidence level.
+
+1. We type our data into the `t.test()` function
+2. When we run the data the output gives us:
+    a. t
+    b. df
+    c. p-value
+    d. alternative hypothesis
+    e. confidence interval
+    f. mean
+3. By only giving the data and no other arguments, the function sets the default confidence level at 95% and the alternative hypothesis to "not equal"
+
+```{r}
+#view the first 5 rows of the cars data set
+head(cars, 5)
+# perform the t.test
+t.test(x = cars$speed)
+```
+
+### Learn More
+
+Please follow the links below to find out about all of the functions and features of the Stats Package
+
+https://rdrr.io/r/stats/stats-package.html
+
+https://cran.r-project.org/web/packages/STAT/index.html
+
+https://www.statmethods.net/stats/anova.html
+
+https://stat.ethz.ch/R-manual/R-devel/library/stats/html/00Index.html#misc
+
